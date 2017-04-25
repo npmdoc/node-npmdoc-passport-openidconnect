@@ -1,0 +1,659 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/jaredhanson/passport-openidconnect#readme">passport-openidconnect (v0.0.2)</a>
+</h1>
+<h4>OpenID Connect authentication strategy for Passport.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-openidconnect">module passport-openidconnect</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.passport-openidconnect">
+            function <span class="apidocSignatureSpan"></span>passport-openidconnect
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.Strategy">
+            function <span class="apidocSignatureSpan">passport-openidconnect.</span>Strategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.super_">
+            function <span class="apidocSignatureSpan">passport-openidconnect.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-openidconnect.</span>Strategy.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-openidconnect.</span>super_.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-openidconnect.Strategy">module passport-openidconnect.Strategy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.Strategy.Strategy">
+            function <span class="apidocSignatureSpan">passport-openidconnect.</span>Strategy
+            <span class="apidocSignatureSpan">(options, verify)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.Strategy.super_">
+            function <span class="apidocSignatureSpan">passport-openidconnect.Strategy.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-openidconnect.Strategy.prototype">module passport-openidconnect.Strategy.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.Strategy.prototype._getOAuth2Client">
+            function <span class="apidocSignatureSpan">passport-openidconnect.Strategy.prototype.</span>_getOAuth2Client
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.Strategy.prototype._shouldLoadUserProfile">
+            function <span class="apidocSignatureSpan">passport-openidconnect.Strategy.prototype.</span>_shouldLoadUserProfile
+            <span class="apidocSignatureSpan">(issuer, subject, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.Strategy.prototype.authenticate">
+            function <span class="apidocSignatureSpan">passport-openidconnect.Strategy.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.Strategy.prototype.authorizationParams">
+            function <span class="apidocSignatureSpan">passport-openidconnect.Strategy.prototype.</span>authorizationParams
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.Strategy.prototype.configure">
+            function <span class="apidocSignatureSpan">passport-openidconnect.Strategy.prototype.</span>configure
+            <span class="apidocSignatureSpan">(identifier, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-openidconnect.super_">module passport-openidconnect.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.super_.super_">
+            function <span class="apidocSignatureSpan">passport-openidconnect.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.super_.Strategy">
+            function <span class="apidocSignatureSpan">passport-openidconnect.super_.</span>Strategy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.passport-openidconnect.super_.prototype">module passport-openidconnect.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.passport-openidconnect.super_.prototype.authenticate">
+            function <span class="apidocSignatureSpan">passport-openidconnect.super_.prototype.</span>authenticate
+            <span class="apidocSignatureSpan">(req, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-openidconnect" id="apidoc.module.passport-openidconnect">module passport-openidconnect</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.passport-openidconnect" id="apidoc.element.passport-openidconnect.passport-openidconnect">
+        function <span class="apidocSignatureSpan"></span>passport-openidconnect
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy(options, verify) {
+  options = options || {};
+  passport.Strategy.call(this);
+  this.name = 'openidconnect';
+  this._verify = verify;
+
+  // TODO: What's the recommended field name for OpenID Connect?
+  this._identifierField = options.identifierField || 'openid_identifier';
+  this._scope = options.scope;
+  this._passReqToCallback = options.passReqToCallback;
+  this._skipUserProfile = (options.skipUserProfile === undefined) ? false : options.skipUserProfile;
+
+  this._setup = undefined;
+
+  this._key = options.sessionKey || (this.name + ':' + url.parse(options.authorizationURL).hostname);
+  this._stateStore = options.store || new SessionStateStore({ key: this._key });
+
+  if (options.authorizationURL &amp;&amp; options.tokenURL) {
+    // This OpenID Connect strategy is configured to work with a specific
+    // provider.  Override the discovery process with pre-configured endpoints.
+    this.configure(require('./setup/manual')(options));
+    //this.configure(require('./setup/dynamic')(options));
+  } else {
+    this.configure(require('./setup/dynamic')(options));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.Strategy" id="apidoc.element.passport-openidconnect.Strategy">
+        function <span class="apidocSignatureSpan">passport-openidconnect.</span>Strategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy(options, verify) {
+  options = options || {};
+  passport.Strategy.call(this);
+  this.name = 'openidconnect';
+  this._verify = verify;
+
+  // TODO: What's the recommended field name for OpenID Connect?
+  this._identifierField = options.identifierField || 'openid_identifier';
+  this._scope = options.scope;
+  this._passReqToCallback = options.passReqToCallback;
+  this._skipUserProfile = (options.skipUserProfile === undefined) ? false : options.skipUserProfile;
+
+  this._setup = undefined;
+
+  this._key = options.sessionKey || (this.name + ':' + url.parse(options.authorizationURL).hostname);
+  this._stateStore = options.store || new SessionStateStore({ key: this._key });
+
+  if (options.authorizationURL &amp;&amp; options.tokenURL) {
+    // This OpenID Connect strategy is configured to work with a specific
+    // provider.  Override the discovery process with pre-configured endpoints.
+    this.configure(require('./setup/manual')(options));
+    //this.configure(require('./setup/dynamic')(options));
+  } else {
+    this.configure(require('./setup/dynamic')(options));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.super_" id="apidoc.element.passport-openidconnect.super_">
+        function <span class="apidocSignatureSpan">passport-openidconnect.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-openidconnect.Strategy" id="apidoc.module.passport-openidconnect.Strategy">module passport-openidconnect.Strategy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.Strategy.Strategy" id="apidoc.element.passport-openidconnect.Strategy.Strategy">
+        function <span class="apidocSignatureSpan">passport-openidconnect.</span>Strategy
+        <span class="apidocSignatureSpan">(options, verify)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy(options, verify) {
+  options = options || {};
+  passport.Strategy.call(this);
+  this.name = 'openidconnect';
+  this._verify = verify;
+
+  // TODO: What's the recommended field name for OpenID Connect?
+  this._identifierField = options.identifierField || 'openid_identifier';
+  this._scope = options.scope;
+  this._passReqToCallback = options.passReqToCallback;
+  this._skipUserProfile = (options.skipUserProfile === undefined) ? false : options.skipUserProfile;
+
+  this._setup = undefined;
+
+  this._key = options.sessionKey || (this.name + ':' + url.parse(options.authorizationURL).hostname);
+  this._stateStore = options.store || new SessionStateStore({ key: this._key });
+
+  if (options.authorizationURL &amp;&amp; options.tokenURL) {
+    // This OpenID Connect strategy is configured to work with a specific
+    // provider.  Override the discovery process with pre-configured endpoints.
+    this.configure(require('./setup/manual')(options));
+    //this.configure(require('./setup/dynamic')(options));
+  } else {
+    this.configure(require('./setup/dynamic')(options));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.Strategy.super_" id="apidoc.element.passport-openidconnect.Strategy.super_">
+        function <span class="apidocSignatureSpan">passport-openidconnect.Strategy.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-openidconnect.Strategy.prototype" id="apidoc.module.passport-openidconnect.Strategy.prototype">module passport-openidconnect.Strategy.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.Strategy.prototype._getOAuth2Client" id="apidoc.element.passport-openidconnect.Strategy.prototype._getOAuth2Client">
+        function <span class="apidocSignatureSpan">passport-openidconnect.Strategy.prototype.</span>_getOAuth2Client
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getOAuth2Client = function (config) {
+  return new OAuth2(config.clientID, config.clientSecret,
+                    '', config.authorizationURL, config.tokenURL);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return self.fail(state, 403);
+      }
+      var code = req.query.code;
+
+      var meta = state;
+      var callbackURL = meta.callbackURL;
+
+      var oauth2 = self.<span class="apidocCodeKeywordSpan">_getOAuth2Client</span>(meta);
+
+      oauth2.getOAuthAccessToken(code, { grant_type: 'authorization_code', redirect_uri: callbackURL }, function(err,
+accessToken, refreshToken, params) {
+if (err) { return self.error(new InternalOAuthError('failed to obtain access token', err)); }
+
+var idToken = params['id_token'];
+if (!idToken) { return self.error(new Error('ID Token not present in token response')); }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.Strategy.prototype._shouldLoadUserProfile" id="apidoc.element.passport-openidconnect.Strategy.prototype._shouldLoadUserProfile">
+        function <span class="apidocSignatureSpan">passport-openidconnect.Strategy.prototype.</span>_shouldLoadUserProfile
+        <span class="apidocSignatureSpan">(issuer, subject, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_shouldLoadUserProfile = function (issuer, subject, done) {
+  if (typeof this._skipUserProfile == 'function' &amp;&amp; this._skipUserProfile.length &gt; 1) {
+    // async
+    this._skipUserProfile(issuer, subject, function(err, skip) {
+      if (err) { return done(err); }
+      if (!skip) { return done(null, true); }
+      return done(null, false);
+    });
+  } else {
+    var skip = (typeof this._skipUserProfile == 'function') ? this._skipUserProfile(issuer, subject) : this._skipUserProfile;
+    if (!skip) { return done(null, true); }
+    return done(null, false);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        // Prior to OpenID Connect Basic Client Profile 1.0 - draft 22, the
+        // "sub" claim was named "user_id".  Many providers still issue the
+        // claim under the old field, so fallback to that.
+        if (!sub) {
+sub = jwtClaims.user_id;
+        }
+
+        self.<span class="apidocCodeKeywordSpan">_shouldLoadUserProfile</span>(iss, sub, function(err, load) {
+if (err) { return self.error(err); };
+
+if (load) {
+  var parsed = url.parse(meta.userInfoURL, true);
+  parsed.query['schema'] = 'openid';
+  delete parsed.search;
+  var userInfoURL = url.format(parsed);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.Strategy.prototype.authenticate" id="apidoc.element.passport-openidconnect.Strategy.prototype.authenticate">
+        function <span class="apidocSignatureSpan">passport-openidconnect.Strategy.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, options) {
+  options = options || {};
+  var self = this;
+
+  if (req.query &amp;&amp; req.query.error) {
+    if (req.query.error == 'access_denied') {
+      return this.fail({ message: req.query.error_description });
+    } else {
+      return this.error(new AuthorizationError(req.query.error_description, req.query.error, req.query.error_uri));
+    }
+  }
+
+  if (req.query &amp;&amp; req.query.code) {
+
+    function loaded(err, ok, state) {
+      if (err) { return self.error(err); }
+      if (!ok) {
+        return self.fail(state, 403);
+      }
+      var code = req.query.code;
+
+      var meta = state;
+      var callbackURL = meta.callbackURL;
+
+      var oauth2 = self._getOAuth2Client(meta);
+
+      oauth2.getOAuthAccessToken(code, { grant_type: 'authorization_code', redirect_uri: callbackURL }, function(err, accessToken
+, refreshToken, params) {
+        if (err) { return self.error(new InternalOAuthError('failed to obtain access token', err)); }
+
+        var idToken = params['id_token'];
+        if (!idToken) { return self.error(new Error('ID Token not present in token response')); }
+
+        var idTokenSegments = idToken.split('.')
+          , jwtClaimsStr
+          , jwtClaims;
+
+        try {
+          jwtClaimsStr = new Buffer(idTokenSegments[1], 'base64').toString();
+          jwtClaims = JSON.parse(jwtClaimsStr);
+        } catch (ex) {
+          return self.error(ex);
+        }
+
+        var missing = ['iss', 'sub', 'aud', 'exp', 'iat'].filter( function(param) { return !jwtClaims[param] } );
+        if (missing.length) return self.error(new Error('id token is missing required parameter(s) - ' + missing.join(', ')));
+
+        // https://openid.net/specs/openid-connect-basic-1_0.html#IDTokenValidation - check 1.
+        if (jwtClaims.iss !== meta.issuer) return self.error(new Error('id token not issued by correct OpenID provider - ' +
+                                                                       'expected: ' + meta.issuer + ' | from: ' + jwtClaims.iss));
+
+        // https://openid.net/specs/openid-connect-basic-1_0.html#IDTokenValidation - checks 2 and 3.
+        if (typeof jwtClaims.aud === 'string') {
+          if (jwtClaims.aud !== meta.clientID) return self.error(new Error('aud parameter does not include this client - is: '
+                                                                           + jwtClaims.aud + '| expected: ' + meta.clientID));
+        } else if (Array.isArray(jwtClaims.aud)) {
+          if (jwtClaims.aud.indexOf(meta.clientID) === -1) return self.error(new Error('aud parameter does not include this client
+ - is: ' +
+                                                                                       jwtClaims.aud + ' | expected to include: ' +
+meta.clientID));
+          if (jwtClaims.length &gt; 1 &amp;&amp; !jwtClaims.azp) return self.error(new Error('azp parameter required with multiple audiences
+'));
+        } else {
+          return self.error(new Error('Invalid aud parameter type'));
+        }
+
+        // https://openid.net/specs/openid-connect-basic-1_0.html#IDTokenValidation - check 4.
+        if (jwtClaims.azp &amp;&amp; jwtClaims.azp !== meta.clientID) return self.error(new Error('this client is not the authorized party
+ - ' +
+                                                                                          'expected: ' + meta.clientID + ' | is: ' +
+jwtClaims.azp));
+
+        // Possible TODO: Add accounting for some clock skew.
+        // https://openid.net/specs/openid-connect-basic-1_0.html#IDTokenValidation - check 5.
+        if (jwtClaims.exp &lt; (Date.now() / 1000)) return self.error(new Error('id token has expired'));
+
+        // Note: https://openid.net/specs/openid-connect-basic-1_0.html#IDTokenValidation - checks 6 and 7 are out of scope of this
+ library.
+
+        // https://openid.net/specs/openid-connect-basic-1_0.html#IDTokenValidation - check 8.
+        if (meta.params.max_age &amp;&amp; (!jwtClaims.auth_time || ((meta.timestamp - meta.params.max_age) &gt; jwtClaims.auth_time))) {
+          return self.error(new Error('auth_time in id_token not included or too old'));
+        }
+
+        if ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.Strategy.prototype.authorizationParams" id="apidoc.element.passport-openidconnect.Strategy.prototype.authorizationParams">
+        function <span class="apidocSignatureSpan">passport-openidconnect.Strategy.prototype.</span>authorizationParams
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authorizationParams = function (options) {
+  return {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // The callback URL is relative, resolve a fully qualified URL from the
+    // URL of the originating request.
+    callbackURL = url.resolve(utils.originalURL(req), callbackURL);
+  }
+}
+meta.callbackURL = callbackURL;
+
+var params = self.<span class="apidocCodeKeywordSpan">authorizationParams</span>(options);
+params['response_type'] = 'code';
+params['client_id'] = config.clientID;
+if (callbackURL) { params.redirect_uri = callbackURL; }
+var scope = options.scope || self._scope;
+if (Array.isArray(scope)) { scope = scope.join(' '); }
+if (scope) {
+  params.scope = 'openid ' + scope;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.Strategy.prototype.configure" id="apidoc.element.passport-openidconnect.Strategy.prototype.configure">
+        function <span class="apidocSignatureSpan">passport-openidconnect.Strategy.prototype.</span>configure
+        <span class="apidocSignatureSpan">(identifier, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">configure = function (identifier, done) {
+  this._setup = identifier;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  this._key = options.sessionKey || (this.name + ':' + url.parse(options.authorizationURL).hostname);
+  this._stateStore = options.store || new SessionStateStore({ key: this._key });
+
+  if (options.authorizationURL &amp;&amp; options.tokenURL) {
+    // This OpenID Connect strategy is configured to work with a specific
+    // provider.  Override the discovery process with pre-configured endpoints.
+    this.<span class="apidocCodeKeywordSpan">configure</span>(require('./setup/manual')(options));
+    //this.configure(require('./setup/dynamic')(options));
+  } else {
+    this.configure(require('./setup/dynamic')(options));
+  }
+}
+
+/**
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-openidconnect.super_" id="apidoc.module.passport-openidconnect.super_">module passport-openidconnect.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.super_.super_" id="apidoc.element.passport-openidconnect.super_.super_">
+        function <span class="apidocSignatureSpan">passport-openidconnect.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.super_.Strategy" id="apidoc.element.passport-openidconnect.super_.Strategy">
+        function <span class="apidocSignatureSpan">passport-openidconnect.super_.</span>Strategy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Strategy() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.passport-openidconnect.super_.prototype" id="apidoc.module.passport-openidconnect.super_.prototype">module passport-openidconnect.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.passport-openidconnect.super_.prototype.authenticate" id="apidoc.element.passport-openidconnect.super_.prototype.authenticate">
+        function <span class="apidocSignatureSpan">passport-openidconnect.super_.prototype.</span>authenticate
+        <span class="apidocSignatureSpan">(req, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authenticate = function (req, options) {
+  throw new Error('Strategy#authenticate must be overridden by subclass');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
